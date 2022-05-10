@@ -1,0 +1,38 @@
+Documentación Challenge App
+
+La Carpeta Challenge contiene un proyecto y una app de Django. 
+Para instalar Django ejecutar el siguiente comando en la terminal
+
+pip install django
+
+La aplicación cuenta con tres modelos de tablas de datos
+
+Alumnos: Datos de los alumnos
+
+Tecnicatura en Programación: Datos de las materias de la carrera
+
+Registros: Registros de inscripción a Materias. 
+Compuesto por ID de Alumno, Apellido, Materias en las que se incribió y un número de ID de la carga y la fecha y horario de la misma (autocompletada)
+
+La estructura de urls es la siguiente
+
+admin/: Sitio del administrador. Usuario Challenge. Password Challenge123A
+
+alumnos/: Endpoint. Deveulve en formato Json el listado de todos los alumnos
+
+alumnos/x: Donde x es el nro de Id del alumno. Devuelve en formato Json los datos específicos del alumno
+
+materias: Endpoint que devuelve en formato Json el listado de Materias
+
+materias/xxxxx: Donde xxxxx es el nombre de la materia. Devuelve en formato Json la información de la materia (Carga horaria, Inscriptos)
+
+registro/x: Donde x es el Id del alumno. Devuelve un HTML con las materias a las que se encuentra inscripto, todas las materias
+y un formulario de carga que filtra las materias habilitadas para inscripción (diferencia entre todas las materias y en las que se encuentra inscripto).
+Cuando se envían los datos del formulario (request == POST) devuelve en Json los datos del registro
+
+Para correr la aplicación abrir una terminal en la carpeta principal (donde se encuentra el acrchivo manage.py) y escribir
+
+python manage.py runserver
+
+La aplicación va a correr en un servidor local de producción
+

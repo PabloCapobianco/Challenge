@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form method="post" enctype="multipart/form-data"> {% csrf_token %}
+  <input type="file" id="inputfl" name="upload">
+  <button type="submit" id="btnt" hidden="hidden">Submit</button>
+</form>
+<button type="button" id="btnf">Submit</button>
+
+{{Materias}}
+
+</body>
+</html>

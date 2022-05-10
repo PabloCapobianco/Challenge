@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+{{Cursadas}}
+<br>
+{{Materias}}
+
+<form method="post" enctype="multipart/form-data"> {% csrf_token %}
+
+{%for materia in Diferencia%}
+<br>
+<input type="checkbox" id = {{materia}} name="Materias" value = {{materia}}>
+<label for={{materia}}>{{materia}}</label>
+{% endfor %}
+<br>
+  <button type="submit" id="btnt">Submit</button>
+
+
+</form>
+
+
+
+</body>
+</html>
